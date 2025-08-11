@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>API Validation</title>
+    </head>
+
+    <body>
+        <h1>API VALIDATION IN JS</h1>
+
+        <form onsubmit="return checkEmail()">
+            Email: <input type="email" id="email" required>
+            <button type="submit">Submit</button>
+        </form>
+
+        <script>
+            function checkEmail()  {
+                let email = document.getElementById("email");
+
+                if (!email.checkValidity())  {
+                    alert(email.validationMessage);//brower's own message 
+                    return false;
+                }
+
+                alert("Email looks good!");
+                return true;
+            }
+        </script>
+    </body>
+</html>
